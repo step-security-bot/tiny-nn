@@ -12,6 +12,6 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
-      - uses: rustsec/audit-check@v1
+      - uses: rustsec/audit-check@main
         with:
           token: ${{ secrets.TOKEN_FOR_UPDATES }}
