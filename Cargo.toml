@@ -1,0 +1,8 @@
+[package]
+name = "tiny-nn"
+version = "0.1.0"
+authors = ["Denny Rommel <rommel.denny@gmail.com>"]
+edition = "2021"
+description = "a tiny nn lib."
+
+[dependencies]
