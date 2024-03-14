@@ -6,14 +6,22 @@ on:
   pull_request:
     branches: [ "main" ]
 
+permissions:
+  contents: read
+
 jobs:
   build:
 
     runs-on: ubuntu-latest
 
     steps:
+    - name: Harden Runner
+      uses: step-security/harden-runner@63c24ba6bd7ba022e95695ff85de572c04a18142 # v2.7.0
+      with:
+        egress-policy: audit
+
     - name: Upload coverage reports to Codecov
-      uses: codecov/codecov-action@v4.1.0
+      uses: codecov/codecov-action@54bcd8715eee62d40e33596ef5e8f0f48dbbccab # v4.1.0
       with:
         token: ${{ secrets.CODECOV_TOKEN }}
         slug: rommeld/tiny-nn
