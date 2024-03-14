@@ -2,7 +2,12 @@
 name = "tiny-nn"
 version = "0.1.0"
 authors = ["Denny Rommel <rommel.denny@gmail.com>"]
-edition = "2021"
+readme = "README.md"
+repository = "https://github.com/rommeld/tiny-nn"
 description = "a tiny nn lib."
+edition = "2021"
+rust-version = "1.75"
+include = ["src/", "LICENSE.md", "README.md"]
 
 [dependencies]
+rand = "0.8.5"
